@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:py="http://genshi.edgewall.org/">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>${section.title}</title>
+  <style type="text/css">
+h1 {
+  text-align: left;
+  margin-bottom: 1em;
+  border-bottom: thin solid black;
+}
+p {
+  margin: 1em 0 1em 0;
+  padding: 0;
+  text-indent: 0;
+}
+.converted-comment {
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  background-color: #ccc;
+  padding: 1em;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+ text-align: center;
+}}
+
+${section.css}
+  </style>
+</head>
+<body>
+  <h1>${section.title}</h1>
+  ${section.html}
+</body>
+</html>
