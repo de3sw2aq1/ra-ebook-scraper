@@ -22,6 +22,8 @@ def getNextUrl(content, url):
 		return urljoin(url, next_h4[0].get('href'))
 	elif next_h4.text == 'To be continued':
 		return None
+	elif len(next_h4) == 0:
+		return None  # No child elements, including <a>, which should mean last page
 	else:
 		logger.warn('Unkown last h4')
 		# IPython.embed()
@@ -86,6 +88,6 @@ while url:
 	i += 1
 
 with open(JSON_PATH, 'w') as outfile:
-  json.dump(pages, outfile)
+	json.dump(pages, outfile, indent=4)
 
 print "Done"
