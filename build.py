@@ -6,11 +6,7 @@ from lxml.etree import Comment
 import logging
 import json
 from sys import exit
-# from genshi.template import TemplateLoader
 from genshi.input import HTML
-
-# import IPython
-# from pprint import pprint
 
 class Chapter:
 
@@ -69,10 +65,7 @@ for page in pages:
 	# Check for missed style attributes
 	for tag in content.xpath("//*[@style]"):
 		logger.warn('Found remaining style attribute' )
-		# IPython.embed()
 		exit('Giving up')
-
-	# IPython.embed()
 
 	chapter = Chapter()
 	chapter.html = HTML(html.tostring(content), encoding='utf-8')

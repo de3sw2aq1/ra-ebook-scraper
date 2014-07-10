@@ -26,7 +26,6 @@ def getNextUrl(content, url):
 		return None  # No child elements, including <a>, which should mean last page
 	else:
 		logger.warn('Unkown last h4')
-		# IPython.embed()
 		exit('Giving up')
 
 logging.basicConfig()
