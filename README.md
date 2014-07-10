@@ -17,4 +17,10 @@ Also a `scrape.json` file will be created. This will be reused if `scrape.py` is
 
 ## Dependencies
 
-Known dependencies are `requests`, `lxml`, `epubbuilder`, and `genshi`. If someone would submit a `requirements.txt` via a pull request it would be appreciated.
+Known dependencies are `requests`, `lxml`, `epubbuilder`, and `genshi`.
+
+Install them with:
+
+```
+pip install -r requirements.txt
+```
