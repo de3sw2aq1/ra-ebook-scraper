@@ -54,7 +54,7 @@ for page in pages:
             logger.warn('Converting commment to tag' )
             pre = content.makeelement('pre', {'class': 'converted-comment'})
             pre.text = c.text
-            content.replace(c, pre)
+            c.getparent().replace(c, pre)
         else:
             logger.warn('Removing commment' )
             c.getparent().remove(c)
